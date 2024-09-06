@@ -1,0 +1,123 @@
+body {
+    background-color: #f8f6f6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: url('/assets/images/images6.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: rgba(173, 216, 230, 0.5); !* Light blue with 50% transparency *!*/
+    background-color: rgba(85, 0, 232, 0.5); /* Light blue with 50% transparency */
+
+    z-index: 1;
+}
+.headerText {
+    text-align: center;
+    /*background-color: rgba(195, 194, 194, 0.41);*/
+    padding: 40px;
+}
+header h1, h3, header button {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 52px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+header h3 {
+    color: white;
+    letter-spacing: 2px;
+}
+
+header button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #870f75;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #b3089c;
+}
+.catName {
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.column:nth-child(1) {
+    background-color: #8e0362;
+}
+
+.column:nth-child(2) {
+    background-color: #ac6b09;
+}
+
+.column:nth-child(3) {
+    background-color: #008b7b;
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+}
+.proj1, .proj2, .proj3{
+    padding: 50px;
+    width: 60%;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    font-family: "Courier New", Courier, serif;
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: #303030
+
+}
+/*.proj1 {*/
+/*    background-color: darkred;*/
+/*}*/
+/*.proj2 {*/
+/*    background-color: darkgreen;*/
+/*}*/
+/*.proj3 {*/
+/*    background-color: darkblue;*/
+/*}*/
