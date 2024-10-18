@@ -357,22 +357,49 @@ div.desc {
         line-height: 2;
     }
     h1 {
-        font-size: 55px;
+        font-size: 45px;
     }
     h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
     h3 {
-        font-size: 35px;
-    }
-    h4 {
-        font-size: 28px;
-    }
-    h5, h6 {
         font-size: 25px;
     }
+    h4 {
+        font-size: 22px;
+    }
+    h5, h6 {
+        font-size: 20px;
+    }
     figcaption {
-        padding: 18px;
+        padding: 16px;
+    }
+    .section {
+        margin-bottom: 250px;
+    }
+    ol {
+        color: #333;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    ul {
+        list-style: square;
+        color: orangered;
+        padding-left: 0;
+        margin-top:0;
+        /*margin-left:0;*/
+    }
+
+    li {
+        line-height: 2rem;
+        padding: 0;
+        font-size: 18px;
+    }
+    .list-tittle {
+        border-left: solid 2px orangered;
+        margin-left: 20px;
+        margin-top: 50px;
     }
 
 
@@ -398,8 +425,10 @@ div.desc {
 
     .header {
         flex-direction: column;
-        padding: 50px;
+        padding: 70px 50px;
+        margin-bottom: 150px;
     }
+
 
     .header-left {
         max-width: 100%;
@@ -415,6 +444,9 @@ div.desc {
         margin-top: 30px;
 
     }
+    .header-right img {
+        width: 100%;
+    }
 
     /*about section====================*/
     .about-container {
@@ -423,7 +455,7 @@ div.desc {
     }
 
     .about-title::before {
-        top           : 0.25em;
+        top           : -0.5em;
         left          : 0.1em;
         opacity       : 0.5;
     }
@@ -437,6 +469,9 @@ div.desc {
     /*artifacts==========================*/
     .artifact-title-container {
         margin-top: 80px;
+    }
+    #main-artifact { /* main artifact title*/
+        margin-top: -80px;
     }
 
     .artifact-title {
@@ -461,7 +496,7 @@ div.desc {
     }
     .artifact-narrative-container {
         width: 100%;
-        padding: 20px;
+        padding: 10px;
     }
 
 }
