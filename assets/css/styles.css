@@ -21,7 +21,7 @@ body {
     font-family: var(--font-1), sans-serif;
     font-weight: 400;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
     font-family: var(--font-2), serif;
     font-weight: 400;
     margin-bottom: 20px;
@@ -37,7 +37,7 @@ h1 {
     font-size: 65px;
 }
 h2 {
-    font-size: 45px;
+    font-size: 55px;
 }
 h3 {
     font-size: 40px;
@@ -47,8 +47,8 @@ h4 {
 }
 h5, h6 {
     font-size: 25px;
-    padding: 20px;
 }
+
 figcaption {
     padding: 20px;
     text-align: center;
@@ -77,13 +77,11 @@ li {
     border-left: solid 2px orangered;
     margin-left: 20px;
     margin-top: 50px;
-}
-
-section {
-    height: 100vh;
+    padding-left: 10px;
 }
 
 
+/*////////////////////////////////// navigation section /////////////////////////////////*/
 /* Navigation Bar================================================= */
 .navbar {
     display: flex;
@@ -137,6 +135,8 @@ section {
     background-color: white;
 }
 
+
+/*////////////////////////////////// header section /////////////////////////////////*/
 /* Header Section ==========================================================*/
 .header {
     display: flex;
@@ -180,17 +180,20 @@ section {
 .primary {
     background-color: #333;
     color: white;
+    border-radius: 5px;
 }
 .primary:hover{
     background-color: white;
     color: #555;
     border: 2px solid #555;
+
 }
 
 .secondary {
     background-color: #fff;
     color: #333;
     border: 2px solid #333;
+    border-radius: 5px;
 }
 .secondary:hover {
     background-color: #555;
@@ -209,27 +212,37 @@ section {
     color: #d85205;
 }
 
+
+/*////////////////////////////////// about section /////////////////////////////////*/
 /*about section===============================================================*/
 .about-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position     : relative;
-    padding: 100px 0;
+    padding: 150px 0;
+}
+.about-container span {
+        font-family: var(--font-2), serif;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 10px;
+        border-left: solid 2px orangered;
 }
 
-.about-title .text-display-title {
+.about-title .section-title {
     margin-bottom: 0;
     position     : relative;
 }
+
 
 .about-title::before {
     content       : attr(data-num);
     font-family: var(--font-1), serif;
     font-weight   : 600;
-    font-size     : 10em;
+    font-size     : 11em;
     letter-spacing: -0.05em;
     line-height   : 1;
     color         : #D4D6D4;
@@ -243,48 +256,84 @@ section {
     padding-top: 40px;
 }
 
-/*artifact section============================================*/
+/*////////////////////////////////// code review section /////////////////////////////////*/
 
-.artifact-single-main  {
-    padding-top: 0;
-    margin-bottom: 100px;
-    margin-top: 80px;
+#code-review-title-container {
+    position: relative;
+    padding-bottom: 130px;
+}
+#code-review-title-container::before {
+    color         : white;
+    top           : 0;
+    left          : -0.1em;
+    opacity       : 0.5;
+}
+.code-review-section {
+    padding-bottom: 100px;
+}
 
+.iframe {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: solid 3px #b43e51;
+    border-radius: 10px;
+    background-color: #cccbcb;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; ">
 
 }
 
+/*////////////////////////////////// artifacts section /////////////////////////////////*/
+/*artifact section============================================*/
+
+.artifact-single-main  {
+    /*padding: 50px 0;*/
+}
+
 .artifact-title  {
-    max-width: 900px;
-    padding-left: 45px;
-    margin: 0 auto;
-    padding-bottom: 10px;
+    padding-top: 30px;
+}
+#artifact1, #artifact2 {
+    padding-top: 150px;
+    padding-bottom: 100px;
 }
 
 .artifact-image-container {
     display: flex;
    justify-content: center;
     gap: 30px;
+    padding: 20px;
+    margin-bottom: 50px;
     background-color: #f6f6f6;
-    padding-top: 50px;
-    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.artifact-image-container img{
+    width: 100%;
 }
 .left-image {
     max-width: 50%;
 }
 
 .artifact-narrative-container{
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 25px;
-
-
+    padding-top: 25px;
 }
 .content-text {
     padding-left: 25px;
 }
+.content-text span {
+    display: none;
+}
+#artifacts-overview {
+    display: block;
+}
+
 .artifact-link {
     padding: 10px 30px;
     /*margin: 10px;*/
@@ -292,6 +341,13 @@ section {
     border-radius: 10px;
     font-size: 14px;
     cursor: pointer;
+}
+/*data-num*/
+#artifact1::before, #artifact2:before, #artifact3:before {
+    color         : white;
+    top           : 0;
+    left          : -0.1em;
+    opacity       : 0.5;
 }
 
 /*image gallery section======================================================*/
@@ -346,12 +402,35 @@ div.desc {
     text-align: center;
 
 }
+/*////////////////////////////////// footer section /////////////////////////////////*/
+/*footer section============================================*/
+/* Footer styling */
+.footer {
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* Add padding top and bottom */
+    position: relative; /* Ensure it stays relative */
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; /* Optional font size adjustment */
+}
+
+.footer p {
+    margin: 0; /* Remove default margin */
+    color: white;
+}
+
 /* Responsive Design =======================================================================================
 ============================================================================================================
 ===========================================================================================================*/
 @media (max-width: 768px) {
 
     /*general settings*/
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
     p{
         font-size: 16px;
         line-height: 2;
@@ -368,38 +447,35 @@ div.desc {
     h4 {
         font-size: 22px;
     }
-    h5, h6 {
+    h5 {
         font-size: 20px;
+    }
+    h6 {
+        font-size: 20px;
+        padding-left: 20px;
     }
     figcaption {
         padding: 16px;
     }
     .section {
-        margin-bottom: 250px;
+        margin-bottom: 10px;
     }
     ol {
         color: #333;
-        padding-left: 0;
+        padding: 20px 10px;
         margin-top: 0;
     }
 
     ul {
-        list-style: square;
-        color: orangered;
-        padding-left: 0;
-        margin-top:0;
-        /*margin-left:0;*/
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     li {
         line-height: 2rem;
-        padding: 0;
+        padding: 10px;
         font-size: 18px;
-    }
-    .list-tittle {
-        border-left: solid 2px orangered;
-        margin-left: 20px;
-        margin-top: 50px;
     }
 
 
@@ -407,7 +483,7 @@ div.desc {
         display: none;
         flex-direction: column; /* Make the menu items stack vertically */
         position: fixed;
-        top: 70px; /* Below the navbar */
+        top: 68px; /* Below the navbar */
         right: 0;
         background-color: #333;
         width: 100%; /* Full width on mobile */
@@ -419,8 +495,13 @@ div.desc {
         display: block; /* Make each link take up full width */
     }
 
+    .menu.open {
+        display: flex;
+    }
+
     .hamburger {
         display: flex;
+        cursor: pointer;
     }
 
     .header {
@@ -442,6 +523,7 @@ div.desc {
     }
     .header-right {
         margin-top: 30px;
+        max-width: 100%;
 
     }
     .header-right img {
@@ -451,10 +533,14 @@ div.desc {
     /*about section====================*/
     .about-container {
         width: 100vw;
-        padding: 20px;
+        padding: 10px;
+    }
+    .section-title {
+        padding-left: 15px;
     }
 
     .about-title::before {
+        font-size     : 9em;
         top           : -0.5em;
         left          : 0.1em;
         opacity       : 0.5;
@@ -466,12 +552,41 @@ div.desc {
         padding-top: 4.5rem;
     }
 
+
+    /*code review section===================*/
+    #code-review-title {
+        top: 2.5em;
+    }
+    #code-review-title-container::before {
+        top           : -0.3em;
+        left          : 0.1em;
+    }
+    .iframe {
+        width: 100%;
+        margin: 20px auto;
+    }
+
     /*artifacts==========================*/
     .artifact-title-container {
         margin-top: 80px;
     }
     #main-artifact { /* main artifact title*/
         margin-top: -80px;
+    }
+
+    /*data-num*/
+    #artifact1::before, #artifact2:before, #artifact3:before {
+        top           : 0;
+        left          : 0.1em;
+    }
+    #artifact3 {
+        padding-top: 130px;
+        padding-bottom: 40px;
+    }
+
+    .section-title {
+        padding-bottom: 10px;
+        padding-left: 20px;
     }
 
     .artifact-title {
@@ -497,6 +612,18 @@ div.desc {
     .artifact-narrative-container {
         width: 100%;
         padding: 10px;
+    }
+    .content-text span {
+        display: inline-block;
+        padding-right: 5px;
+        color: orangered;
+        font-size: 25px;
+    }
+
+
+    /*image gallery*/
+    .image-gallery {
+        margin-top: 20px;
     }
 
 }
