@@ -1,9 +1,9 @@
 
 ////////////////////mobile menu setup
-document.getElementById("hamburger").addEventListener("click", function() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
-});
+// document.getElementById("hamburger").addEventListener("click", function() {
+//     const menu = document.getElementById("menu");
+//     menu.classList.toggle("active");
+// });
 
 //////////////////////////////data-num
 // Select the .about-title div
@@ -12,15 +12,28 @@ const aboutTitle = document.querySelector('.about-title');
 // Get the value of data-num
 const number = aboutTitle.dataset.num;
 
-// Display the number in the span with class "display-num"
-// const displayNum = document.querySelector('.display-num');
-// displayNum.textContent = number;
 
 
 
 ////////////////////////////////// highlight active menu item on scroll
 // Select all menu links
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 const menuLinks = document.querySelectorAll('.menu-link');
+
+// Toggle menu open/close when hamburger is clicked
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+});
+
+// Close menu when a link is clicked (on mobile)
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (menu.classList.contains('open')) {
+            menu.classList.remove('open');
+        }
+    });
+});
 
 // Function to highlight active link based on scroll position
 window.addEventListener('scroll', () => {
@@ -41,3 +54,5 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+///////////////////////////////////// close mobile menu automatically after clicking a menu link
